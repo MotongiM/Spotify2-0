@@ -7,6 +7,7 @@ import {
     RssIcon,
     HeartIcon,
 }   from "@heroicons/react/outline";
+import {signOut} from "next-auth/react";
 
 
 function Sidebar() {
@@ -16,6 +17,10 @@ function Sidebar() {
             <button className='flex items-center space-x-2 hover:text-white'>
                 <HomeIcon  className='h-5 w-5' />
                 <p>Home</p>
+            </button>
+            <button className='flex items-center space-x-2 hover:text-white'>
+                <HomeIcon  className='h-5 w-5' onClick={() => signOut()}/>
+                <p>Logout</p>
             </button>
             <button className='flex items-center space-x-2 hover:text-white'>
                 <SearchIcon  className='h-5 w-5' />
